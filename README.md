@@ -5,17 +5,17 @@ Prof. Ms. Juliano Farias da Nóbrega
 ## Instruções para montagem do arquivo (NASM Linux)
 
 - Instalar o nasm no Linux: `$ sudo apt-get install nasm`
-<!-- - Instalar o binutils: `$ sudo apt-get install binutils` -->
-- Criar o arquivo no formato .asm (Exemplo: filename.asm)
+- Criar o arquivo via nano no formato .asm (Exemplo: filename.asm)
 - Passo 1 - Gerar arquivo objeto: `$ nasm -f elf64 filename.asm`
 - Passo 2 - Gerar arquivo binário: `$ ld -s -o filename filename.o`
-- Passo 3 - Executar arquivo: `$ /.filename`
+- Passo 3 - Executar arquivo: `$ ./filename`
 
 ## Arquivos disponíveis
 
 #1 - Hello World <br>
 #2 - Declaração de variáveis em Assembly <br>
 #3 - Programa de soma em Assembly <br>
+#4 - Multiplicação de Matrizes <br>
 
 ## Link Úteis
 
