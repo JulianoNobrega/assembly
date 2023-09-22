@@ -3,7 +3,7 @@ SECTION .data
     hexadecinalPos 	    DB 0AFh
     hexadecimalPre 	    DB 0xAF
     binarioPos 			DB 10101010b
-    binarioPre 			DB 0b1010101011
+    binarioPre 			DW 0b1010101011
     octalPos 			DW 777o
     octalPre 			DW 0o777
 
