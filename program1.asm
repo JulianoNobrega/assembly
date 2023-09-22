@@ -1,22 +1,18 @@
 section .data
-    hello db 'Hello, World!',0    ; Null-terminated string to be printed
-    hello_len equ $ - hello       ; Length of the string
+    hello db 'Hello, World!',0    ; String a ser apresentada no terminal
+    hello_len equ $ - hello       ; Comprimento da string
 
 section .text
     global _start
-
 _start:
-    ; File descriptor for stdout (1)
-    mov eax, 4
-    mov ebx, 1
-    ; Pointer to the message
-    mov ecx, hello
-    ; Message length
-    mov edx, hello_len
-    ; Invoke the sys_write syscall (syscall number 4)
-    int 0x80
 
-    ; Exit the program (syscall number 1)
-    mov eax, 1
+    mov eax, 4 ; Registrador EAX recebe o valor 4
+    mov ebx, 1 ; Registrador EBX recebe o valor 1
+
+    mov ecx, hello ; Registrador ECX recebe a String
+    mov edx, hello_len ; Registrador EDX recebe o comprimento da String
+    int 0x80 ; Chamada da SysCall 4 (Responsável pela escrita)
+
+    mov eax, 1 ; Registrador EAX recebe o valor 1, responsável pelo encerramento do programa
     xor ebx, ebx  ; Exit status (0)
-    int 0x80
+    int 0x80; Chamada da Syscall 1, presdente no registrador EAX
