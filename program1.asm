@@ -1,5 +1,5 @@
 section .data
-    hello db 'Hello, World!',0    ; String a ser apresentada no terminal
+    hello db 'Hello, World!',0xa    ; String a ser apresentada no terminal
     hello_len equ $ - hello       ; Comprimento da string
 
 section .text
