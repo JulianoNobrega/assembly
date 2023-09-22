@@ -14,8 +14,6 @@ Prof. Ms. Juliano Farias da Nóbrega
 
 #1 - Hello World <br>
 #2 - Declaração de variáveis em Assembly <br>
-#3 - Programa de soma em Assembly <br>
-#4 - Multiplicação de Matrizes <br>
 
 ## Link Úteis
 
