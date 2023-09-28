@@ -20,5 +20,5 @@ Prof. Ms. Juliano Farias da Nóbrega
 
 ## Link Úteis
 
-[Site NASM](https://www.nasm.us/) <br>
-[Guia NASM](https://mentebinaria.gitbook.io/assembly/)
+[Site NASM - Em inglês](https://www.nasm.us/) <br>
+[Guia de referência NASM - Em Português](https://mentebinaria.gitbook.io/assembly/)
