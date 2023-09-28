@@ -14,6 +14,8 @@ Prof. Ms. Juliano Farias da Nóbrega
 
 #1 - Hello World <br>
 #2 - Declaração de variáveis em Assembly <br>
+#3 - 
+#4 - Soma de dois inteiros em Assembly <br>
 
 ## Link Úteis
 
