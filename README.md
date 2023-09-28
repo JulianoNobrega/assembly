@@ -5,9 +5,9 @@ Prof. Ms. Juliano Farias da Nóbrega
 ## Instruções para montagem do arquivo (NASM Linux)
 
 - Instalar o nasm no Linux: `$ sudo apt-get install nasm`
-- Criar o arquivo via nano no formato .asm (Exemplo: filename.asm)
-- Passo 1 - Gerar arquivo objeto: `$ nasm -f elf64 filename.asm`
-- Passo 2 - Gerar arquivo binário: `$ ld -s -o filename filename.o`
+- Criar o arquivo via nano no formato .asm (Exemplo: $ nano filename.asm)
+- Passo 1 - Gerar arquivo objeto (extensão .o): `$ nasm -f elf64 filename.asm`
+- Passo 2 - Gerar (MONTAR) o arquivo binário a partir do objeto: `$ ld -s -o filename filename.o`
 - Passo 3 - Executar arquivo: `$ ./filename`
 
 ## Arquivos disponíveis
