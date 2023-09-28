@@ -12,12 +12,13 @@ Prof. Ms. Juliano Farias da Nóbrega
 
 ## Arquivos disponíveis
 
-#1 - Hello World <br>
-#2 - Declaração de variáveis em Assembly <br>
-#3 - Exibindo String<br>
-#4 - Soma de dois inteiros em Assembly <br>
+#1 - (program1.asm) Hello World <br>
+#2 - (program2.asm) Declaração de variáveis em Assembly <br>
+#3 - (program3.asm) Exibindo String<br>
+#4 - (program4.asm) Soma de dois inteiros em Assembly <br>
+#5 - (program5.asm) Uso de saltos condicionais <br>
 
 ## Link Úteis
 
 [Site NASM](https://www.nasm.us/)
-
+[Guia NASM](https://mentebinaria.gitbook.io/assembly/)
