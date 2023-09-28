@@ -1,9 +1,9 @@
 ; Parte 1 - Variáveis DEFINIDAS na memória
 section .data
-    x db '5' ; Variavel x = 5
-    y db '3' ; Variavel y = 3
-    msg db  "A soma de x e y é: " ; Mensagem
-    len equ $ - msg ; Variável Len: Comprimento da Strig
+    x db '5' ; Variavel x = 5 (tipo DataByte)
+    y db '3' ; Variavel y = 3 (tipo DataByte)
+    msg db  "A soma de x e y é: " ; Mensagem (tipo DataByte)
+    len equ $ - msg ; Variável Len: Recebe (inteiro) o comprimento da Strig 
 
 ; Parte 2 - Variáveis NÃO DEFINIDAS na memória
 segment .bss
