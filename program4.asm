@@ -1,13 +1,13 @@
-; Parte 1 - Variáveis DEFINIDAS
+; Parte 1 - Variáveis DEFINIDAS na memória
 section .data
     x db '5' ; Variavel x = 5
     y db '3' ; Variavel y = 3
     msg db  "A soma de x e y é: " ; Mensagem
     len equ $ - msg ; Variável Len: Comprimento da Strig
 
-; Parte 2 - Variáveis NÃO DEFINIDAS
+; Parte 2 - Variáveis NÃO DEFINIDAS na memória
 segment .bss
-    sum resb 1 ; Variável SUM 
+    sum resb 1 ; Espaço reservado na memória para a variável SUM
 
 ; Parte 3 - Código do Programa
 section .text
@@ -15,11 +15,11 @@ global _start ; Seção "Main"
 _start:
 
     mov     eax, [x] ; Atribui x ao registrador EAX
-    sub     eax, '0' ; 
+    sub     eax, '0' ; Princípio de "boas práticas"* no NASM - Subtrair 0 do registrador EAX
     mov     ebx, [y] ; Atribui y ao registrador EBX
-    sub     ebx, '0' ; 
+    sub     ebx, '0' ; Princípio de "boas práticas"* no NASM - Subtrair 0 do registrador EBX
     add     eax, ebx ; SOMA dos valores, registrados em EAX (Destino)
-    add     eax, '0' ; 
+    add     eax, '0' ; Princípio de "boas práticas"* no NASM - SOMAR 0 ao registrador EAX
 
     mov     [sum], eax ; Atribui a soma, presente em EAX para a variável não definida SUM
 
@@ -37,3 +37,5 @@ _start:
 
     mov     eax, 1 ; Atribuição do valor 1 ao registrador EAX
     int     0x80 ; Chamada #3 de sistema - Análise do estado do processador - EXIT
+
+; * Pesquisar sobre "Boas práticas" na programação Assembly
