@@ -21,5 +21,5 @@ Prof. Ms. Juliano Farias da Nóbrega
 ## Link Úteis
 
 [Site NASM - Em inglês](https://www.nasm.us/) <br>
-[Guia de referência NASM - Em Português](https://mentebinaria.gitbook.io/assembly/)
-[Guia de Syscalls - x86 32bits](https://chromium.googlesource.com/chromiumos/docs/+/master/constants/syscalls.md)
+[Guia de referência NASM - Em Português](https://mentebinaria.gitbook.io/assembly/) <br>
+[Guia de Syscalls - x86 32bits](https://chromium.googlesource.com/chromiumos/docs/+/master/constants/syscalls.md) <br>
