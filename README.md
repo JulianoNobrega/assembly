@@ -19,6 +19,7 @@ Prof. Ms. Juliano Farias da Nóbrega
 #5 - (program5.asm) Uso de saltos condicionais <br>
 #6 - (program6.asm) Uso de mais saltos condicionais <br>
 #7 - (program7.asm) Uso de saltos para verifica maior entre 3 valores <br>
+#8 - (program8.asm) PUSH e POP
 
 ## Link Úteis
 
