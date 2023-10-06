@@ -1,75 +1,83 @@
 section .data
-    num dd '5'
-    msg1 db "Digite um numero: ", 0
-    msg2 db "Numeros iguais!", 0
-    msg3 db "O menor numero é: ", 0
-    len1 equ $ - msg1
-    len2 equ $ - msg2
-    len3 equ $ - msg3
-    
-segment .bss
-    entrada resd 1
-    menor resd 1
+    number dd '5'                      
+    input1 dw "Insira o numero: ", 0      
+    len_input_1 equ $ - input1            
+    saida dw "O menor numero e: ", 0    
+    len_saida equ $ - saida               
+    iguais dw "Os numeros sao iguais", 0 
+    len_iguais equ $ - iguais             
 
+section .bss
+    num resd 1; reservando 2 byte para a variavel num
+    menor resb 1 
+
+; começa o código
 section .text
 global _start
+_start: 
+  mov eax, 4
+  mov ebx, 1          
+  mov ecx, input1     
+  mov edx, len_input_1
+  int 0x80
+  jmp read_number  
+  
 
-_start:
-    ;mensagem
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, msg1
-    mov edx, len1
-    int 0x80
+; le o numero 
+read_number:
+  mov edx, 1
+  mov ecx, num 
+  mov ebx, 0
+  mov eax, 3
+  int 0x80
+  jmp compare
 
-   ;pega o valor do usuario
-   mov eax, 3
-   mov ebx, 0
-   mov ecx, entrada
-   mov edx, 1
-   int 0x80
-   
-   mov eax, [entrada]
-   mov ebx, [num]
-   cmp eax, ebx
-   
-   je num_iguais
-   jl num1_menor
-   jg num2_menor
-   
-num_iguais:
-   mov eax, 4
-   mov ebx, 1
-   mov ecx, msg2
-   mov edx, len2
-   int 0x80
-   jmp end
+; move os numeros para os registradores e compara eles
+compare:
+  mov eax, [number] 
+  mov ebx, [num]
+  cmp eax, ebx
 
-num1_menor:
-    mov [menor], eax
-    jmp print
-   
-num2_menor:
-    mov [menor], ebx
-    jmp print
+  je numeros_iguais   ;JE  jump if equal
+  jg numero1_maior    ; jg jump if greater
+  jb numero1_menor     ; jb jump if less
+  
+numero1_maior:
+  mov [menor],ebx
+  jmp print1
 
-print:
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, msg3
-    mov edx, len3
-    int 0x80
-    jmp print_num
-    
-print_num:
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, menor
-    mov edx, 1
-    int 0x80
-    jmp end
+numero1_menor:
+  mov [menor], eax
+  jmp print1
+  
+numeros_iguais:
+  mov eax, 4
+  mov ebx, 1 
+  mov ecx, iguais
+  mov edx, len_iguais
+  int 0x80 
+  jmp end
 
+; mostra a mensagem e chama para mostrar o numero menor 
+print1:
+  mov eax, 4
+  mov ebx, 1 
+  mov ecx, saida 
+  mov edx, len_saida
+  int 0x80
+  jmp print_number
+
+print_number:
+  
+  mov eax, 4
+  mov ebx, 1 
+  mov ecx, menor
+  mov edx, 1
+  int 0x80
+  jmp end
+  
+; termina o programa
 end:
-    mov eax, 1
-    xor eax, ebx
-    int 0x80
+  mov eax, 1
+  xor ebx, ebx
+  int 0x80
