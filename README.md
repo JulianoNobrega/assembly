@@ -27,4 +27,4 @@ Prof. Ms. Juliano Farias da Nóbrega
 [Site NASM - Em inglês](https://www.nasm.us/) <br>
 [Guia de referência NASM - Em Português](https://mentebinaria.gitbook.io/assembly/) <br>
 [Guia de Syscalls - x86 32bits](https://chromium.googlesource.com/chromiumos/docs/+/master/constants/syscalls.md) <br>
-[Emulador Online de Assemblyu](https://www.jdoodle.com/compile-assembler-nasm-online/)
+[Emulador Online de Assembly](https://www.jdoodle.com/compile-assembler-nasm-online/)
