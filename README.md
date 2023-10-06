@@ -21,6 +21,7 @@ Prof. Ms. Juliano Farias da Nóbrega
 #7 - (program7.asm) Uso de saltos para verifica maior entre 3 valores <br>
 #8 - (program8.asm) PUSH e POP <br>
 #9 - (program9.asm) Loop com PUSH, POP e INC <br>
+#10 - (trabalho.asm) Trabalho em Sala de Aula, para comparar valores <br>
 
 ## Link Úteis
 
