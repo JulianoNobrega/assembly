@@ -17,6 +17,7 @@ Prof. Ms. Juliano Farias da Nóbrega
 #3 - (program3.asm) Exibindo String<br>
 #4 - (program4.asm) Soma de dois inteiros em Assembly <br>
 #5 - (program5.asm) Uso de saltos condicionais <br>
+#6 - (program6.asm) Uso de mais saltos condicionais <br>
 
 ## Link Úteis
 
