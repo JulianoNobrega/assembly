@@ -18,6 +18,7 @@ Prof. Ms. Juliano Farias da Nóbrega
 #4 - (program4.asm) Soma de dois inteiros em Assembly <br>
 #5 - (program5.asm) Uso de saltos condicionais <br>
 #6 - (program6.asm) Uso de mais saltos condicionais <br>
+#7 - (program7.asm) Uso de saltos para verifica maior entre 3 valores <br>
 
 ## Link Úteis
 
